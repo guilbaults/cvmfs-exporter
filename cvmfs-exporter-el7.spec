@@ -11,6 +11,8 @@ Source0:  https://github.com/guilbaults/%{name}/archive/v%{gittag}/%{name}-%{ver
 BuildArch:      noarch
 BuildRequires:	systemd
 Requires:       python3
+Requires:       python36-pyxattr
+Requires:       python36-psutil
 
 %description
 Prometheus exporter for cvmfs client stats
@@ -25,7 +27,7 @@ Prometheus exporter for cvmfs client stats
 mkdir -p %{buildroot}/%{_bindir}
 mkdir -p %{buildroot}/%{_unitdir}
 
-sed -i -e '1i#!/usr/bin/python' cvmfs-exporter.py
+sed -i -e '1i#!/usr/bin/python3.6' cvmfs-exporter.py
 install -m 0755 %{name}.py %{buildroot}/%{_bindir}/%{name}
 install -m 0644 cvmfs-exporter.service %{buildroot}/%{_unitdir}/cvmfs-exporter.service
 
