@@ -161,8 +161,8 @@ if __name__ == '__main__':
     parser.add_argument(
         '--port',
         type=int,
-        default=8080,
-        help='Collector http port, default is 8080')
+        default=9868,
+        help='Collector http port, default is 9868')
     parser.add_argument("--verbose", help="increase output verbosity",
         action="store_true")
     args = parser.parse_args()

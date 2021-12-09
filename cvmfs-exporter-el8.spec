@@ -1,6 +1,6 @@
 Name:	  cvmfs-exporter
-Version:  0.0.1
-%global gittag 0.0.1
+Version:  0.0.2
+%global gittag 0.0.2
 Release:  1%{?dist}
 Summary:  Prometheus exporter for cvmfs client stats
 
@@ -40,5 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_unitdir}/cvmfs-exporter.service
 
 %changelog
+* Thu Dec 9 2021 Simon Guilbault <simon.guilbault@calculquebec.ca> 0.0.2-1
+- Using port 9868, reserved in prometheus wiki
 * Thu Dec 9 2021 Simon Guilbault <simon.guilbault@calculquebec.ca> 0.0.1-1
 - Initial release
