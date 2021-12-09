@@ -1,0 +1,12 @@
+[Unit]
+Description=cvmfs-exporter
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/cvmfs-exporter
+PIDFile=/var/run/cvmfs-exporter.pid
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
